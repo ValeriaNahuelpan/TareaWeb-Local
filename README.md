@@ -8,6 +8,8 @@
 
 4- en la carpeta xampp/htdocs  poner la carpeta MundoPets
 
-5-para ver la pagina te metes a http://localhost/MundoPets/portada.py
+5- en los archivos .py cambiar la primera linea por la ruta de tu python
 
-6-En http://localhost/phpmyadmin/ se puede ver el esquema tarea2 con sus tablas y la info que se ingresa 
+6-para ver la pagina te metes a http://localhost/MundoPets/portada.py
+
+7-En http://localhost/phpmyadmin/ se puede ver el esquema tarea2 con sus tablas y la info que se ingresa 
