@@ -4,7 +4,7 @@
 
 2- abrir el panel de control de xampp poner en start apache y mysql
 
-3-ir a http://localhost/phpmyadmin/ y en "importar" poner el tarea2.sql para que se creen las tablas
+3-ir a http://localhost/phpmyadmin/ y en "importar" poner el tarea2.sql para que se creen las tablas y estando en el esquema importar tambien region-comuna.sql y tipo_mascota.sql 
 
 4- en la carpeta xampp/htdocs  poner la carpeta MundoPets
 
