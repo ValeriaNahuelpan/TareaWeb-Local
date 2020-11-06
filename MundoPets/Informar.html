@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="estilos.css">
+    <script src="javaform.js"></script>
+    <script  src="opciones.js"></script>
+    <title>Informar mascotas</title>
+</head>
+<body>
+<header class="header">
+    <div class="container logo-nav-container">
+        <a href="portada.py" class="logo">
+            <img src="pata.png" width="30" height="30" alt="logo">
+            MundoPets!
+            <img src="pata.png" width="30" height="30" alt="logo">
+        </a>
+
+        <span class="menu-icon"><img src="menu.png" width="30" height="30" alt="menu-icono"></span>
+        <nav class="navigation">
+            <ul class="show">
+                <li><a href="Informar.html">Informar Mascotas</a></li>
+                <li><a href="ver_listado.py">Ver Listado de Mascotas</a></li>
+                <li><a href="Estadísticas.html">Estadísticas</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<div class="títulos">
+    <h1>Informar Mascotas</h1>
+</div>
+
+<div class="mainform">
+
+    <form id="form" method="post" enctype="multipart/form-data" autocomplete=off action = "publicar_response.py" onsubmit="return validarFormulario()">
+        <div class="entrada">
+            <b>
+                Domicilio
+            </b>
+        </div>
+
+        <div class="entrada">
+            <div class="leyenda">Región</div>
+            <select name="región" id='Region' onchange="cambiarComuna()">
+                <option value="" selected="selected">Seleccione una región...</option>
+                <option value="Metropolitana de Santiago">Metropolitana de Santiago</option>
+                <option value="Arica y Parinacota">Arica y Parinacota</option>
+                <option value="Tarapacá">Tarapacá</option>
+                <option value="Antofagasta">Antofagasta</option>
+                <option value="Atacama">Atacama</option>
+                <option value="Coquimbo">Coquimbo</option>
+                <option value="Valparaíso">Valparaíso</option>
+                <option value="Libertador G. Bernardo O'Higgins">Libertador G. Bernardo O'Higgins</option>
+                <option value="Maule">Maule</option>
+                <option value="Ñuble">Ñuble</option>
+                <option value="Biobío">Biobío</option>
+                <option value="Araucanía">Araucanía</option>
+                <option value="Los Ríos">Los Ríos</option>
+                <option value="Los Lagos">Los Lagos</option>
+                <option value="Aysén del G. Carlos Ibañez del Campo">Aysén del G. Carlos Ibañez del Campo</option>
+                <option value="Magallanes y la Antártica Chilena">Magallanes y la Antártica Chilena</option>
+            </select>
+        </div>
+
+        <div class="entrada">
+            <div class="leyenda">Comuna</div>
+            <select name="Comuna" id='Comuna'>
+                <option value="" selected="selected">Seleccione una comuna...</option>
+            </select>
+        </div>
+
+        <div class="entrada">
+            <div class="leyenda">Calle</div>
+            <input name="calle" type="text" id="calle" maxlength="250" size="100"
+                   placeholder="escriba el nombre de calle aquí"/>
+        </div>
+
+        <div class="entrada">
+            <div class="leyenda">Número</div>
+            <input name="numero" type="text" id="numero" maxlength="20" size="20"
+                   placeholder="escriba el numero de calle"/>
+        </div>
+
+        <div class="entrada">
+            <div class="leyenda">Sector</div>
+            <input name="sector" type="text" id="sector" maxlength="100" size="100"
+                   placeholder="escriba el sector aquí"/>
+        </div>
+
+        <div class="entrada">
+            <b>
+                Datos de contacto
+            </b>
+        </div>
+
+        <div class="entrada">
+            <div class="leyenda">Nombre</div>
+            <input name="nombre" type="text" id="nombre" maxlength="200" size="100"
+                   placeholder="escriba el nombre aquí"/>
+        </div>
+
+        <div class="entrada">
+            <div class="leyenda">Email</div>
+            <input name="email" type="email" id="email" size="100" placeholder="escriba email aquí"/>
+        </div>
+
+        <div class="entrada">
+            <div class="leyenda">Celular</div>
+            <input name="celular" type="text" id="celular" size="15" placeholder="escriba número de celular "/>
+        </div>
+        <div class="entrada">
+            <b>
+                Información de mascota
+            </b>
+        </div>
+
+        <div class="entrada">
+            <div class="leyenda">Tipo-mascota</div>
+            <select name="tipo-mascota1" id="tipo-mascota1">
+                <option value="" selected="selected">Seleccione un tipo</option>
+                <option value="1">perro</option>
+                <option value="2">gato</option>
+                <option value="3">pez</option>
+                <option value="4">tortuga</option>
+                <option value="5">hámster</option>
+                <option value="6">loro</option>
+                <option value="7">iguana</option>
+                <option value="8">araña</option>
+            </select>
+        </div>
+
+        <div class="entrada">
+            <div class="leyenda">Edad en años</div>
+            <input name="edad-mascota1" type="text" id="edad-mascota1" size="5"/>
+        </div>
+        <div class="entrada">
+            <div class="leyenda">Color</div>
+            <input name="color-mascota1" type="text" id="color-mascota1" size="30"/>
+        </div>
+        <div class="entrada">
+            <div class="leyenda">Raza</div>
+            <input name="raza-mascota1" type="text" id="raza-mascota1" size="30"/>
+        </div>
+        <div class="entrada">
+            <div class="leyenda">Esterilizado</div>
+            <select name="esterilizado-mascota1" id="esterilizado-mascota1">
+                <option value="" selected="selected">Seleccione una respuesta</option>
+                <option value="0">si</option>
+                <option value="1">no</option>
+                <option value="2">no aplica</option>
+            </select>
+        </div>
+
+        <div class="entrada">
+            <div class="leyenda">Vacunas al dia</div>
+            <select name="vacunas-mascota1" id="vacunas-mascota1">
+                <option value="" selected="selected">Seleccione una respuesta</option>
+                <option value="0">si</option>
+                <option value="1">no</option>
+                <option value="2">no aplica</option>
+            </select>
+        </div>
+
+        <div class="entrada">
+            <div class="leyenda">Foto</div>
+            <input name="foto-mascota11" type="file" id="foto-mascota11" accept="image/jpeg"><!-- los numeros en el name significan que es la foto 1 de la mascota 1-->
+            <button type="button" onclick="agregarOtraFoto(1)">
+                agregar otra foto
+            </button>
+        </div>
+        <div class="Mascotas" id="entrada1"></div><!--espacio para agregar otra foto de la primera mascota-->
+        <div id="NuevaMascota"></div> <!--espacio para agregar nueva mascota-->
+        <div>
+            <button type="button" onclick="AgregarMascota()">
+                Informar otra mascota en este domicilio
+            </button>
+        </div>
+        <div>
+            <button type="button" onclick="Pregunta()">
+                Enviar Información de este domicilio
+            </button>
+        </div>
+        <div id="pregunta">
+            <a> ¿Está seguro que desea enviar
+                esta información?</a>
+            <br>
+            <br>
+            <button type="submit" onclick="location.href='Gracias.html'">
+                Sí, estoy total y absolutamente seguro
+            </button>
+            <button type="button" onclick="noEstoySeguro()">
+                No estoy
+                seguro, quiero volver al formulario
+            </button>
+        </div>
+
+    </form>
+</div>
+<div id="error"></div>
+
+
+<!-- <script src="../js/jquery-3.5.0.min.js"></script> -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="javaS.js"></script>
+
+
+</body>
+</html>
